@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and PPT Upload</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Upload Your Text and PPT</h1>
+            <p>Easily submit your text and PowerPoint files in a few clicks.</p>
+        </header>
+
+        <main>
+            <!-- Text Area -->
+            <label for="textBox" class="label">Enter Text:</label>
+            <textarea id="textBox" placeholder="Paste your text here..." style="resize: none;" oninput="autoResize(this)"></textarea>
+
+            <!-- Upload Button -->
+            <label for="pptUpload" class="label">Upload PPT:</label>
+            <input type="file" id="pptUpload" accept=".ppt,.pptx">
+
+            <!-- Submit Button -->
+            <button id="submitButton">Generate Vidcast</button>
+
+            <!-- Output Section -->
+            <div id="output" class="output" hidden>
+                <h3>Audio Output</h3>
+                <audio id="audioOutput" controls></audio>
+                <p id="fileOutput"></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
